@@ -35,7 +35,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               style={{
                 strokeDasharray: 1800,
                 strokeDashoffset: 1800,
-                animation: "drawPath 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards",
+                animation: "drawPath 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards",
               }}
             />
             {/* Blue fill - fades in after stroke completes */}
