@@ -4,8 +4,8 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [exiting, setExiting] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setExiting(true), 3200);
-    const hideTimer = setTimeout(() => onComplete(), 3800);
+    const timer = setTimeout(() => setExiting(true), 2400);
+    const hideTimer = setTimeout(() => onComplete(), 3000);
     return () => { clearTimeout(timer); clearTimeout(hideTimer); };
   }, [onComplete]);
 
@@ -35,7 +35,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               style={{
                 strokeDasharray: 1800,
                 strokeDashoffset: 1800,
-                animation: "drawPath 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards",
+                animation: "drawPath 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards",
               }}
             />
             {/* Blue fill - fades in after stroke completes */}
@@ -44,7 +44,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               fill="#005bc9"
               style={{
                 opacity: 0,
-                animation: "fillReveal 0.5s ease 1.9s forwards",
+                animation: "fillReveal 0.4s ease 1.3s forwards",
               }}
             />
             {/* Green accent - slides in and glows */}
@@ -54,23 +54,17 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               style={{
                 opacity: 0,
                 transform: "translateX(-20px) translateY(10px)",
-                animation: "accentSlam 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 2.3s forwards",
+                animation: "accentSlam 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.6s forwards",
                 filter: "drop-shadow(0 0 0px rgba(159,234,27,0))",
               }}
             />
           </svg>
         </div>
         <div
-          className="font-body text-[11px] font-semibold tracking-[5px] uppercase text-muted-foreground"
-          style={{ opacity: 0, animation: "fadeUp 0.6s ease 2.6s forwards" }}
-        >
-          Excelência em cada detalhe
-        </div>
-        <div
-          className="h-[3px] bg-primary mt-3.5"
+          className="h-[3px] bg-primary mt-4"
           style={{
             width: 0,
-            animation: "barGrow 1.2s ease 2.4s forwards",
+            animation: "barGrow 0.8s ease 1.8s forwards",
             boxShadow: "0 0 12px hsl(214 100% 39%)",
           }}
         />
