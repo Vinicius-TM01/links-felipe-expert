@@ -1,16 +1,50 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import SplashScreen from "@/components/SplashScreen";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ServicesCarousel from "@/components/ServicesCarousel";
+import AboutSection from "@/components/AboutSection";
+import LinksSection from "@/components/LinksSection";
+import Footer from "@/components/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [showSplash, setShowSplash] = useState(true);
+
+  const handleSplashComplete = useCallback(() => setShowSplash(false), []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+
+      {/* Progress bar */}
+      <div
+        className="fixed top-0 left-0 h-[2px] bg-primary z-[9998]"
+        style={{
+          width: 0,
+          animation: "progressLoad 3s ease forwards",
+          boxShadow: "0 0 8px hsl(357 93% 50%)",
+        }}
+      />
+
+      <div
+        className="max-w-[480px] mx-auto min-h-screen"
+        style={{ opacity: 0, animation: "mainReveal 0.8s ease 3.4s forwards" }}
+      >
+        <Header />
+        <HeroSection />
+        <div className="h-8 relative z-[1] -mt-8" style={{ background: "linear-gradient(to bottom, transparent, hsl(0 0% 4%))" }} />
+
+        <ServicesCarousel />
+        <div className="h-px bg-border mx-4 mb-5" />
+
+        <AboutSection />
+        <div className="h-px bg-border mx-4 mb-5" />
+
+        <LinksSection />
+        <Footer />
+      </div>
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;

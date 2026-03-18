@@ -1,0 +1,47 @@
+const Footer = () => (
+  <footer className="py-6 px-5 pb-10 border-t border-border text-center">
+    <div className="font-display text-[28px] tracking-[4px] text-primary opacity-70 mb-2.5">MARCA</div>
+    <div className="flex justify-center gap-4 my-3.5">
+      {["instagram", "youtube", "linkedin"].map((s) => (
+        <a
+          key={s}
+          href="#"
+          className="w-9 h-9 rounded-full bg-surface border border-border flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:bg-primary/10 group"
+        >
+          <SocialIcon name={s} />
+        </a>
+      ))}
+    </div>
+    <p className="text-[11px] text-muted-foreground tracking-[1px]">
+      © 2026 Sua Empresa. Todos os direitos reservados.
+    </p>
+  </footer>
+);
+
+const SocialIcon = ({ name }: { name: string }) => {
+  const cls = "w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors";
+  if (name === "instagram")
+    return (
+      <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" />
+        <circle cx="12" cy="12" r="5" />
+        <circle cx="17.5" cy="6.5" r="1.5" />
+      </svg>
+    );
+  if (name === "youtube")
+    return (
+      <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+      </svg>
+    );
+  return (
+    <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+};
+
+export default Footer;
