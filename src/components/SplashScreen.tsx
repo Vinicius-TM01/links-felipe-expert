@@ -61,16 +61,10 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
           </svg>
         </div>
         <div
-          className="font-body text-[11px] font-semibold tracking-[5px] uppercase text-muted-foreground"
-          style={{ opacity: 0, animation: "fadeUp 0.6s ease 2.6s forwards" }}
-        >
-          Excelência em cada detalhe
-        </div>
-        <div
-          className="h-[3px] bg-primary mt-3.5"
+          className="h-[3px] bg-primary mt-4"
           style={{
             width: 0,
-            animation: "barGrow 1.2s ease 2.4s forwards",
+            animation: "barGrow 0.8s ease 1.8s forwards",
             boxShadow: "0 0 12px hsl(214 100% 39%)",
           }}
         />
