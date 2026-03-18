@@ -52,7 +52,7 @@ const HeroSection = () => (
           textShadow: "0 2px 20px rgba(0,0,0,0.8), 0 0 60px rgba(0,91,201,0.2)",
         }}
       >
-        SUA<br />EMPRESA
+        ASSESSORIA<br />TM
       </h1>
       <p className="text-[11px] tracking-[4px] uppercase mt-1.5" style={{ color: "rgba(255,255,255,0.55)" }}>
         Resultados reais · Estratégia de elite
