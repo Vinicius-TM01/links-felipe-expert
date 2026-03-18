@@ -6,7 +6,7 @@ const HeroSection = () => (
     <div
       className="absolute inset-0"
       style={{
-        background: "linear-gradient(135deg, #1a0000 0%, #3d0000 20%, #1a0808 40%, #0a0a1a 70%, #000 100%)",
+        background: "linear-gradient(135deg, #000a1a 0%, #001a4d 20%, #000d1a 40%, #0a0a1a 70%, #000 100%)",
       }}
     />
     {/* Scanlines */}
