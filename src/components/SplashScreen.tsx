@@ -54,7 +54,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               style={{
                 opacity: 0,
                 transform: "translateX(-20px) translateY(10px)",
-                animation: "accentSlam 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 2.3s forwards",
+                animation: "accentSlam 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.6s forwards",
                 filter: "drop-shadow(0 0 0px rgba(159,234,27,0))",
               }}
             />
