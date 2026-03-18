@@ -15,7 +15,7 @@ const Footer = () => (
       ))}
     </div>
     <p className="text-[11px] text-muted-foreground tracking-[1px]">
-      © 2026 Sua Empresa. Todos os direitos reservados.
+      © 2026 Assessoria TM. Todos os direitos reservados.
     </p>
   </footer>
 );
