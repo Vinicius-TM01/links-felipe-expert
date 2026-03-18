@@ -29,7 +29,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 };
 
 const SplashContent = () => (
-  <div className="flex flex-col items-center">
+  <div className="flex flex-col items-center gap-5 px-6">
     <img
       src={logo}
       alt="Performança"
