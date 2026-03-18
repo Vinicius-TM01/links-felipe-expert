@@ -22,7 +22,7 @@ const Index = () => {
         style={{
           width: 0,
           animation: "progressLoad 3s ease forwards",
-          boxShadow: "0 0 8px hsl(357 93% 50%)",
+          boxShadow: "0 0 8px hsl(214 100% 39%)",
         }}
       />
 

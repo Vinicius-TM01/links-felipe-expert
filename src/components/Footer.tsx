@@ -1,6 +1,8 @@
+import logo from "@/assets/logo.svg";
+
 const Footer = () => (
   <footer className="py-6 px-5 pb-10 border-t border-border text-center">
-    <div className="font-display text-[28px] tracking-[4px] text-primary opacity-70 mb-2.5">MARCA</div>
+    <img src={logo} alt="Performança" className="h-8 opacity-70 mb-2.5 mx-auto" />
     <div className="flex justify-center gap-4 my-3.5">
       {["instagram", "youtube", "linkedin"].map((s) => (
         <a

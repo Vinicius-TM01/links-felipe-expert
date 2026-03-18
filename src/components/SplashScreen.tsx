@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.svg";
 
 const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [exiting, setExiting] = useState(false);
@@ -29,17 +30,16 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 
 const SplashContent = () => (
   <div className="flex flex-col items-center">
-    <div
-      className="font-display text-primary tracking-[6px]"
+    <img
+      src={logo}
+      alt="Performança"
+      className="h-16 md:h-20"
       style={{
-        fontSize: "clamp(52px, 15vw, 86px)",
         opacity: 0,
         animation: "logoReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards",
-        textShadow: "0 0 40px rgba(229,9,20,0.7), 0 0 80px rgba(229,9,20,0.3)",
+        filter: "drop-shadow(0 0 40px rgba(0,91,201,0.7)) drop-shadow(0 0 80px rgba(0,91,201,0.3))",
       }}
-    >
-      SUA MARCA
-    </div>
+    />
     <div
       className="font-body text-[11px] font-semibold tracking-[5px] uppercase text-muted-foreground"
       style={{ opacity: 0, animation: "fadeUp 0.6s ease 1s forwards" }}
@@ -51,7 +51,7 @@ const SplashContent = () => (
       style={{
         width: 0,
         animation: "barGrow 1.2s ease 0.8s forwards",
-        boxShadow: "0 0 12px hsl(357 93% 50%)",
+        boxShadow: "0 0 12px hsl(214 100% 39%)",
       }}
     />
   </div>
