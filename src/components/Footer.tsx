@@ -1,3 +1,5 @@
+import logo from "@/assets/logo.svg";
+
 const Footer = () => (
   <footer className="py-6 px-5 pb-10 border-t border-border text-center">
     <img src={logo} alt="Performança" className="h-8 opacity-70 mb-2.5 mx-auto" />

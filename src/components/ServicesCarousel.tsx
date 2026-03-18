@@ -32,8 +32,8 @@ const ServicesCarousel = () => {
             onClick={() => setActive(active === s.id ? null : s.id)}
             className={`flex-none snap-start rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
               active === s.id
-                ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(357_93%_50%),0_8px_30px_rgba(229,9,20,0.4)]"
-                : "hover:shadow-[0_8px_30px_rgba(229,9,20,0.35)]"
+                ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(214_100%_39%),0_8px_30px_rgba(0,91,201,0.4)]"
+                : "hover:shadow-[0_8px_30px_rgba(0,91,201,0.35)]"
             }`}
             style={{ width: "calc(38vw)", maxWidth: 160, aspectRatio: "2/3" }}
           >

@@ -49,7 +49,7 @@ const HeroSection = () => (
         className="font-display leading-[0.95] tracking-[4px] uppercase text-foreground"
         style={{
           fontSize: "clamp(38px, 12vw, 58px)",
-          textShadow: "0 2px 20px rgba(0,0,0,0.8), 0 0 60px rgba(229,9,20,0.2)",
+          textShadow: "0 2px 20px rgba(0,0,0,0.8), 0 0 60px rgba(0,91,201,0.2)",
         }}
       >
         SUA<br />EMPRESA
