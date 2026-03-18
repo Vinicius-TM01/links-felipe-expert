@@ -44,7 +44,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               fill="#005bc9"
               style={{
                 opacity: 0,
-                animation: "fillReveal 0.5s ease 1.9s forwards",
+                animation: "fillReveal 0.4s ease 1.3s forwards",
               }}
             />
             {/* Green accent - slides in and glows */}
