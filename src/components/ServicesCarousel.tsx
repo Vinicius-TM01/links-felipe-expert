@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ImageIcon } from "lucide-react";
+import capaTrackeamento from "@/assets/capa-trackeamento.jpg";
 
 const services = [
-  { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real." },
+  { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento },
   { id: 2, label: "Assessoria", desc: "Assessoria estratégica para crescimento sustentável." },
   { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados." },
   { id: 4, label: "Resultados", desc: "Análise e entrega de resultados mensuráveis." },
@@ -37,11 +38,15 @@ const ServicesCarousel = () => {
             }`}
             style={{ width: "calc(38vw)", maxWidth: 160, aspectRatio: "2/3" }}
           >
-            {/* Placeholder */}
-            <div className="w-full h-full flex flex-col items-center justify-center gap-2.5">
-              <ImageIcon className="w-9 h-9 opacity-40 text-muted-foreground" />
-              <span className="text-[9px] tracking-[2px] uppercase text-muted-foreground">Sua imagem</span>
-            </div>
+            {/* Placeholder or Image */}
+            {s.image ? (
+              <img src={s.image} alt={s.label} className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center gap-2.5">
+                <ImageIcon className="w-9 h-9 opacity-40 text-muted-foreground" />
+                <span className="text-[9px] tracking-[2px] uppercase text-muted-foreground">Sua imagem</span>
+              </div>
+            )}
 
             {/* Badge */}
             {s.badge && (
