@@ -2,11 +2,12 @@ import { useState } from "react";
 import { ImageIcon } from "lucide-react";
 import capaTrackeamento from "@/assets/capa-trackeamento.jpg";
 import capaAssessoria from "@/assets/capa-assessoria.jpg";
+import capaConsultoria from "@/assets/capa-consultoria.jpg";
 
 const services = [
   { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento },
   { id: 2, label: "Assessoria", desc: "Assessoria estratégica para crescimento sustentável.", image: capaAssessoria },
-  { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados." },
+  { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados.", image: capaConsultoria },
   { id: 4, label: "Resultados", desc: "Análise e entrega de resultados mensuráveis." },
 ];
 
