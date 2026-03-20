@@ -27,7 +27,7 @@ const ServicesCarousel = () => {
       </div>
 
       {/* Carousel */}
-      <div className="grid grid-cols-4 gap-2.5 px-4 pb-3">
+      <div className="grid grid-cols-3 gap-2.5 px-4 pb-3">
         {services.map((s) => (
           <div
             key={s.id}
