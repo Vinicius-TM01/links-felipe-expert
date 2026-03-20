@@ -28,17 +28,17 @@ const ServicesCarousel = () => {
       </div>
 
       {/* Carousel */}
-      <div className="carousel-scroll flex gap-2.5 overflow-x-auto px-4 pb-3 snap-x snap-mandatory">
+      <div className="grid grid-cols-4 gap-2.5 px-4 pb-3">
         {services.map((s) => (
           <div
             key={s.id}
             onClick={() => setActive(active === s.id ? null : s.id)}
-            className={`flex-none snap-start rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
+            className={`rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
               active === s.id
                 ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(214_100%_39%),0_8px_30px_rgba(0,91,201,0.4)]"
                 : "hover:shadow-[0_8px_30px_rgba(0,91,201,0.35)]"
             }`}
-            style={{ width: "calc(38vw)", maxWidth: 160, aspectRatio: "2/3" }}
+            style={{ aspectRatio: "2/3" }}
           >
             {/* Placeholder or Image */}
             {s.image ? (
