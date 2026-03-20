@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ImageIcon } from "lucide-react";
 import capaTrackeamento from "@/assets/capa-trackeamento.jpg";
 import capaAssessoria from "@/assets/capa-assessoria.jpg";
+import capaConsultoria from "@/assets/capa-consultoria.jpg";
 
 const services = [
   { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento },
