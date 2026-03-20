@@ -8,7 +8,6 @@ const services = [
   { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento },
   { id: 2, label: "Assessoria", desc: "Assessoria estratégica para crescimento sustentável.", image: capaAssessoria },
   { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados.", image: capaConsultoria },
-  { id: 4, label: "Resultados", desc: "Análise e entrega de resultados mensuráveis." },
 ];
 
 const ServicesCarousel = () => {
@@ -28,7 +27,7 @@ const ServicesCarousel = () => {
       </div>
 
       {/* Carousel */}
-      <div className="grid grid-cols-4 gap-2.5 px-4 pb-3">
+      <div className="grid grid-cols-3 gap-2.5 px-4 pb-3">
         {services.map((s) => (
           <div
             key={s.id}
