@@ -5,9 +5,9 @@ import capaAssessoria from "@/assets/capa-assessoria.jpg";
 import capaConsultoria from "@/assets/capa-consultoria.jpg";
 
 const services = [
-  { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento },
-  { id: 2, label: "Assessoria", desc: "Assessoria estratégica para crescimento sustentável.", image: capaAssessoria },
-  { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados.", image: capaConsultoria },
+  { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento, whatsappMsg: "Olá! Tenho interesse no serviço de Trackeamento. Gostaria de saber mais!" },
+  { id: 2, label: "Assessoria", desc: "Assessoria estratégica para crescimento sustentável.", image: capaAssessoria, whatsappMsg: "Olá! Tenho interesse no serviço de Assessoria. Gostaria de saber mais!" },
+  { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados.", image: capaConsultoria, whatsappMsg: "Olá! Tenho interesse no serviço de Consultoria. Gostaria de saber mais!" },
 ];
 
 const ServicesCarousel = () => {
