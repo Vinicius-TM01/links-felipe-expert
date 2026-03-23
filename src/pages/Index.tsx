@@ -40,7 +40,7 @@ const Index = () => {
         <AboutSection />
         <div className="h-px bg-border mx-4 mb-5" />
 
-        <LinksSection />
+        
         <Footer />
       </div>
     </>
