@@ -1,7 +1,7 @@
 const stats = [
-  { number: "+200", label: "Clientes" },
+  { number: "+420", label: "Clientes" },
   { number: "98%", label: "Satisfação" },
-  { number: "5★", label: "Avaliação" },
+  { number: "+240Mi", label: "Faturados para parceiros" },
 ];
 
 const AboutSection = () => (
