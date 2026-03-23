@@ -17,7 +17,7 @@ const services = [
   {
     id: 2,
     label: "Assessoria",
-    desc: "Acompanhamento contínuo e estratégico da sua operação de marketing digital. Analisamos suas campanhas, otimizamos investimentos em tráfego pago, criamos relatórios de performance e trabalhamos lado a lado com seu time para escalar resultados de forma consistente e sustentável.",
+    desc: "Entramos dentro da sua empresa e acompanhamos de perto cada etapa — da matéria-prima à entrega final. Mapeamos todos os processos, identificamos ineficiências e implementamos melhorias estratégicas para otimizar a operação por completo e aumentar o seu faturamento de forma real e sustentável.",
     image: capaAssessoria,
     whatsappMsg: "Olá! Tenho interesse no serviço de Assessoria. Gostaria de saber mais!",
   },
