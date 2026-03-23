@@ -70,6 +70,7 @@ const HeroSection = () => {
           Assistir
         </button>
         <button
+          onClick={() => document.getElementById("sobre-nos")?.scrollIntoView({ behavior: "smooth" })}
           className="flex-1 max-w-[130px] h-9 text-foreground font-condensed text-sm font-bold tracking-[1px] rounded flex items-center justify-center gap-1.5 cursor-pointer transition-all"
           style={{ background: "rgba(109,109,110,0.7)", backdropFilter: "blur(4px)" }}
         >

@@ -40,9 +40,6 @@ const ServicesCarousel = () => {
         <span className="font-condensed text-[17px] font-bold tracking-[0.5px] text-foreground">
           Popular na nossa empresa
         </span>
-        <a href="#" className="text-xs font-semibold text-primary tracking-[0.5px] hover:brightness-125 transition-all">
-          Ver tudo ›
-        </a>
       </div>
 
       {/* Carousel */}
