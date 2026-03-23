@@ -4,13 +4,19 @@ const Footer = () => (
   <footer className="py-6 px-5 pb-10 border-t border-border text-center">
     <img src={logo} alt="Performança" className="h-8 opacity-70 mb-2.5 mx-auto" />
     <div className="flex justify-center gap-4 my-3.5">
-      {["instagram", "youtube", "linkedin"].map((s) => (
+      {[
+        { name: "instagram", url: "https://www.instagram.com/rufforuski/" },
+        { name: "youtube", url: "https://www.youtube.com/@rufforuski2644" },
+        { name: "linkedin", url: "https://www.linkedin.com/in/ruffo-ruski-453623334/" },
+      ].map((s) => (
         <a
-          key={s}
-          href="#"
+          key={s.name}
+          href={s.url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-surface border border-border flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:bg-primary/10 group"
         >
-          <SocialIcon name={s} />
+          <SocialIcon name={s.name} />
         </a>
       ))}
     </div>
