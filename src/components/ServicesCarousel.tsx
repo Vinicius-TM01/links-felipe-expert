@@ -5,9 +5,28 @@ import capaAssessoria from "@/assets/capa-assessoria.jpg";
 import capaConsultoria from "@/assets/capa-consultoria.jpg";
 
 const services = [
-  { id: 1, label: "Trackeamento", badge: "NOVO", desc: "Monitoramento avançado de métricas e KPIs em tempo real.", image: capaTrackeamento, whatsappMsg: "Olá! Tenho interesse no serviço de Trackeamento. Gostaria de saber mais!" },
-  { id: 2, label: "Assessoria", desc: "Assessoria estratégica para crescimento sustentável.", image: capaAssessoria, whatsappMsg: "Olá! Tenho interesse no serviço de Assessoria. Gostaria de saber mais!" },
-  { id: 3, label: "Consultoria", desc: "Consultoria especializada para otimizar seus resultados.", image: capaConsultoria, whatsappMsg: "Olá! Tenho interesse no serviço de Consultoria. Gostaria de saber mais!" },
+  {
+    id: 1,
+    label: "Trackeamento",
+    badge: "NOVO",
+    desc: "Implementamos e configuramos toda a estrutura de rastreamento do seu negócio digital — pixels, tags, API de conversões e eventos personalizados. Garantimos que cada clique, lead e venda sejam contabilizados com precisão, eliminando desperdício de verba e permitindo decisões baseadas em dados reais.",
+    image: capaTrackeamento,
+    whatsappMsg: "Olá! Tenho interesse no serviço de Trackeamento. Gostaria de saber mais!",
+  },
+  {
+    id: 2,
+    label: "Assessoria",
+    desc: "Acompanhamento contínuo e estratégico da sua operação de marketing digital. Analisamos suas campanhas, otimizamos investimentos em tráfego pago, criamos relatórios de performance e trabalhamos lado a lado com seu time para escalar resultados de forma consistente e sustentável.",
+    image: capaAssessoria,
+    whatsappMsg: "Olá! Tenho interesse no serviço de Assessoria. Gostaria de saber mais!",
+  },
+  {
+    id: 3,
+    label: "Consultoria",
+    desc: "Diagnóstico completo do seu cenário digital com plano de ação personalizado. Identificamos gargalos, oportunidades de crescimento e traçamos uma estratégia clara para você atingir suas metas — desde posicionamento de marca até funis de vendas e automações que convertem.",
+    image: capaConsultoria,
+    whatsappMsg: "Olá! Tenho interesse no serviço de Consultoria. Gostaria de saber mais!",
+  },
 ];
 
 const ServicesCarousel = () => {
