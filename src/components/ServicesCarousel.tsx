@@ -91,7 +91,7 @@ const ServicesCarousel = () => {
       {/* Expanded description */}
       <div
         className={`mx-4 bg-surface border-l-[3px] border-primary rounded-r-md overflow-hidden transition-all duration-400 ${
-          activeService ? "max-h-[160px] opacity-100 py-3.5 px-4" : "max-h-0 opacity-0 py-0 px-4"
+          activeService ? "max-h-[280px] opacity-100 py-3.5 px-4" : "max-h-0 opacity-0 py-0 px-4"
         }`}
       >
         {activeService && (
