@@ -5,7 +5,7 @@ const stats = [
 ];
 
 const AboutSection = () => (
-  <section className="px-5 pb-8">
+  <section id="sobre-nos" className="px-5 pb-8">
     <div className="font-condensed text-[11px] font-bold tracking-[4px] uppercase text-primary mb-2">
       Quem somos
     </div>
