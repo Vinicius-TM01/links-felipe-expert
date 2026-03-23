@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import AboutSection from "@/components/AboutSection";
-import LinksSection from "@/components/LinksSection";
+
 import Footer from "@/components/Footer";
 
 const Index = () => {
