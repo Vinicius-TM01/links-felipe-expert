@@ -9,9 +9,10 @@ const services = [
     id: 1,
     label: "Trackeamento",
     badge: "NOVO",
-    desc: "Implementamos e configuramos toda a estrutura de rastreamento do seu negócio digital — pixels, tags, API de conversões e eventos personalizados. Garantimos que cada clique, lead e venda sejam contabilizados com precisão, eliminando desperdício de verba e permitindo decisões baseadas em dados reais.",
+    desc: "A TM Tracking instala a inteligência que faltava na sua operação. Configuramos pixels, API de conversões e rastreamento server-side para que seu gestor de tráfego saiba exatamente o que funciona — reduzindo até 47% do custo por venda e eliminando desperdício de verba em achismos.",
     image: capaTrackeamento,
-    whatsappMsg: "Olá! Tenho interesse no serviço de Trackeamento. Gostaria de saber mais!",
+    ctaLabel: "Saiba mais",
+    ctaLink: "https://tracking.assessoriatm.com/",
   },
   {
     id: 2,
