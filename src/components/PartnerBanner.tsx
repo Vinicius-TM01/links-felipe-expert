@@ -1,11 +1,11 @@
-import useLauths from "@/assets/use-lauths.jpg";
+import useLauths from "@/assets/use-lauths-2.jpg";
 
 const PartnerBanner = () => {
   return (
     <section className="px-4 pb-5">
       <div className="flex items-baseline justify-between mb-3">
         <span className="font-condensed text-[17px] font-bold tracking-[0.5px] text-foreground">
-          Melhor Proxy
+          Use Lauth
         </span>
       </div>
       <a
@@ -16,7 +16,7 @@ const PartnerBanner = () => {
       >
         <img
           src={useLauths}
-          alt="Lauth - Melhor Proxy"
+          alt="Use Lauth"
           className="w-full h-auto block"
           loading="lazy"
           onError={(e) => {
