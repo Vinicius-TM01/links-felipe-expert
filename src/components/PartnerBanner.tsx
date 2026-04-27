@@ -8,7 +8,7 @@ const PartnerBanner = () => (
       </span>
     </div>
     <a
-      href="https://lauth.us/?ref=assessoriatm"
+      href="https://go.hotmart.com/Q104596431B"
       target="_blank"
       rel="noopener noreferrer"
       className="block rounded-lg overflow-hidden border border-border hover:border-primary/60 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,91,201,0.4)]"
