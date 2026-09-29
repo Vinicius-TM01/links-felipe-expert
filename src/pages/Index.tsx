@@ -23,7 +23,7 @@ const Index = () => {
         style={{
           width: 0,
           animation: "progressLoad 3s ease forwards",
-          boxShadow: "0 0 8px hsl(214 100% 39%)",
+          boxShadow: "0 0 8px hsl(142 75% 67%)",
         }}
       />
 
@@ -33,7 +33,7 @@ const Index = () => {
       >
         <Header />
         <HeroSection />
-        <div className="h-8 relative z-[1] -mt-8" style={{ background: "linear-gradient(to bottom, transparent, hsl(0 0% 4%))" }} />
+        <div className="h-8 relative z-[1] -mt-8" style={{ background: "linear-gradient(to bottom, transparent, hsl(150 10% 4%))" }} />
 
         <ServicesCarousel />
         <div className="h-px bg-border mx-4 mb-5" />

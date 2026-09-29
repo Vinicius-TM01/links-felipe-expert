@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Play, Volume2, VolumeX, Info } from "lucide-react";
+import logoStacked from "@/assets/logo-stacked.svg";
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -36,30 +37,29 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 z-[2]"
         style={{
-          background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 30%, transparent 50%, rgba(0,0,0,0.5) 75%, hsl(0 0% 4%) 100%)",
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 30%, transparent 50%, rgba(0,0,0,0.5) 75%, hsl(150 10% 4%) 100%)",
         }}
       />
       {/* Vignette */}
       <div
         className="absolute inset-0 z-[2] pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 0% 50%, rgba(0,91,201,0.08) 0%, transparent 60%), radial-gradient(ellipse at 100% 50%, rgba(159,234,27,0.08) 0%, transparent 60%)",
+          background: "radial-gradient(ellipse at 0% 50%, rgba(107,234,153,0.1) 0%, transparent 60%), radial-gradient(ellipse at 100% 50%, rgba(107,234,153,0.1) 0%, transparent 60%)",
         }}
       />
 
       {/* Title */}
       <div className="absolute bottom-20 left-0 right-0 z-[3] text-center px-6">
-        <h1
-          className="font-display leading-[0.95] tracking-[4px] uppercase text-foreground"
-          style={{
-            fontSize: "clamp(38px, 12vw, 58px)",
-            textShadow: "0 2px 20px rgba(0,0,0,0.8), 0 0 60px rgba(0,91,201,0.2)",
-          }}
-        >
-          ASSESSORIA TM
+        <h1>
+          <img
+            src={logoStacked}
+            alt="Higor Trader"
+            className="mx-auto w-[64%] max-w-[260px] h-auto"
+            style={{ filter: "drop-shadow(0 2px 20px rgba(0,0,0,0.8)) drop-shadow(0 0 40px rgba(107,234,153,0.25))" }}
+          />
         </h1>
-        <p className="text-[11px] tracking-[4px] uppercase mt-1.5" style={{ color: "rgba(255,255,255,0.55)" }}>
-          Resultados reais · Estratégia de elite
+        <p className="text-[11px] tracking-[4px] uppercase mt-3" style={{ color: "rgba(255,255,255,0.6)" }}>
+          Trader profissional em cripto
         </p>
       </div>
 
@@ -75,7 +75,7 @@ const HeroSection = () => {
           style={{ background: "rgba(109,109,110,0.7)", backdropFilter: "blur(4px)" }}
         >
           <Info className="w-3.5 h-3.5" />
-          Sobre nós
+          Sobre mim
         </button>
       </div>
 

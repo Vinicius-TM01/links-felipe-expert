@@ -12,7 +12,7 @@ const PartnerBanner = () => {
         href="https://go.hotmart.com/Q104596431B"
         target="_blank"
         rel="noopener noreferrer"
-        className="block rounded-lg overflow-hidden border border-border hover:border-primary/60 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,91,201,0.4)]"
+        className="block rounded-lg overflow-hidden border border-border hover:border-primary/60 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(107,234,153,0.4)]"
       >
         <img
           src={useLauths}

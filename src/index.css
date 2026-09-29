@@ -6,27 +6,27 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 214 100% 39%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 86 89% 51%;
-    --accent-foreground: 0 0% 4%;
+    --background: 150 10% 4%;
+    --foreground: 80 14% 95%;
+    --card: 150 8% 7%;
+    --card-foreground: 80 14% 95%;
+    --popover: 150 8% 7%;
+    --popover-foreground: 80 14% 95%;
+    --primary: 142 75% 67%;
+    --primary-foreground: 139 66% 9%;
+    --secondary: 150 7% 10%;
+    --secondary-foreground: 80 14% 95%;
+    --muted: 150 7% 10%;
+    --muted-foreground: 129 5% 62%;
+    --accent: 142 78% 75%;
+    --accent-foreground: 139 66% 9%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 16%;
-    --input: 0 0% 16%;
-    --ring: 214 100% 39%;
+    --border: 150 6% 16%;
+    --input: 150 6% 16%;
+    --ring: 142 75% 67%;
     --radius: 0.25rem;
-    --surface: 0 0% 10%;
+    --surface: 150 7% 10%;
 
     --font-display: 'Bebas Neue', sans-serif;
     --font-condensed: 'Barlow Condensed', sans-serif;
@@ -68,9 +68,9 @@
 }
 
 @keyframes accentSlam {
-  0% { opacity: 0; transform: translateX(-20px) translateY(10px); filter: drop-shadow(0 0 0px rgba(159,234,27,0)); }
-  60% { opacity: 1; transform: translateX(3px) translateY(-2px); filter: drop-shadow(0 0 20px rgba(159,234,27,0.8)); }
-  100% { opacity: 1; transform: translateX(0) translateY(0); filter: drop-shadow(0 0 8px rgba(159,234,27,0.4)); }
+  0% { opacity: 0; transform: translateX(-20px) translateY(10px); filter: drop-shadow(0 0 0px rgba(107,234,153,0)); }
+  60% { opacity: 1; transform: translateX(3px) translateY(-2px); filter: drop-shadow(0 0 20px rgba(107,234,153,0.8)); }
+  100% { opacity: 1; transform: translateX(0) translateY(0); filter: drop-shadow(0 0 8px rgba(107,234,153,0.4)); }
 }
 
 @keyframes barGrow {

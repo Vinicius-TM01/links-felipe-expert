@@ -2,12 +2,10 @@ import logo from "@/assets/logo.svg";
 
 const Footer = () => (
   <footer className="py-6 px-5 pb-10 border-t border-border text-center">
-    <img src={logo} alt="Performança" className="h-8 opacity-70 mb-2.5 mx-auto" />
+    <img src={logo} alt="Higor Trader" className="h-6 opacity-80 mb-2.5 mx-auto" />
     <div className="flex justify-center gap-4 my-3.5">
       {[
-        { name: "instagram", url: "https://www.instagram.com/rufforuski/" },
-        { name: "youtube", url: "https://www.youtube.com/@rufforuski2644" },
-        { name: "linkedin", url: "https://www.linkedin.com/in/ruffo-ruski-453623334/" },
+        { name: "instagram", url: "https://www.instagram.com/higortraderjr/" },
       ].map((s) => (
         <a
           key={s.name}
@@ -21,7 +19,7 @@ const Footer = () => (
       ))}
     </div>
     <p className="text-[11px] text-muted-foreground tracking-[1px]">
-      © 2026 Assessoria TM. Todos os direitos reservados.
+      © 2026 Higor Trader. Todos os direitos reservados.
     </p>
   </footer>
 );

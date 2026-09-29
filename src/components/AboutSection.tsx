@@ -1,25 +1,23 @@
 const stats = [
-  { number: "+420", label: "Clientes" },
-  { number: "98%", label: "Satisfação" },
-  { number: "+240Mi", label: "Faturados para parceiros" },
+  { number: "+30mil", label: "Membros no Telegram" },
+  { number: "4", label: "Lives por dia" },
+  { number: "+10", label: "Pessoas no time" },
 ];
 
 const AboutSection = () => (
   <section id="sobre-nos" className="px-5 pb-8">
-    <div className="font-condensed text-[11px] font-bold tracking-[4px] uppercase text-primary mb-2">Quem somos</div>
+    <div className="font-condensed text-[11px] font-bold tracking-[4px] uppercase text-primary mb-2">Quem sou eu</div>
     <h2 className="font-display tracking-[3px] leading-none mb-3.5" style={{ fontSize: "clamp(28px, 8vw, 38px)" }}>
-      SOBRE A<br />
-      EMPRESA
+      O HIGOR E A<br />
+      <span className="text-primary">CRIPTO TRADER ACADEMY</span>
     </h2>
     <p className="text-sm font-light leading-[1.7] mb-2.5" style={{ color: "rgba(255,255,255,0.72)" }}>
-      A TM é uma assessoria de marketing que une excelência, alto padrão e tecnologia para entregar estratégias
-      inteligentes e resultados consistentes. Com uma atuação consultiva e orientada por dados, desenvolve soluções
-      personalizadas a partir de análises aprofundadas, estudo de comportamento e leitura precisa dos indicadores de
-      performance.
+      Larguei a engenharia para viver do mercado. Hoje sou trader profissional em cripto, empresário e fundador da
+      Cripto Trader Academy, a escola onde ensino o método que uso no meu dia a dia.
     </p>
     <p className="text-sm font-light leading-[1.7]" style={{ color: "rgba(255,255,255,0.72)" }}>
-      Mais do que executar ações, a TM transforma informação em decisões estratégicas, combinando visão de mercado,
-      inovação e performance para posicionar marcas de forma sólida e competitiva.
+      No Grupo VIP eu não mostro resultado pronto: opero ao vivo, junto com os alunos, quatro vezes por dia. Você vê a
+      entrada, a saída e o raciocínio de cada operação, e aprende operando do meu lado.
     </p>
 
     <div className="grid grid-cols-3 gap-2.5 mt-5">
