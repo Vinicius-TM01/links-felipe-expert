@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import AboutSection from "@/components/AboutSection";
-import PartnerBanner from "@/components/PartnerBanner";
 
 import Footer from "@/components/Footer";
 
@@ -36,9 +35,6 @@ const Index = () => {
         <div className="h-8 relative z-[1] -mt-8" style={{ background: "linear-gradient(to bottom, transparent, hsl(150 10% 4%))" }} />
 
         <ServicesCarousel />
-        <div className="h-px bg-border mx-4 mb-5" />
-
-        <PartnerBanner />
         <div className="h-px bg-border mx-4 mb-5" />
 
         <AboutSection />

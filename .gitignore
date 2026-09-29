@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Material privado do cliente (não publicar)
+2. Materiais/
+Capas/
+*Transcript*.pdf
