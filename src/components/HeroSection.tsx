@@ -1,13 +1,31 @@
-import { Play, Info } from "lucide-react";
+import { useRef, useState } from "react";
+import { Play, Volume2, VolumeX, Info } from "lucide-react";
 import logoStacked from "@/assets/logo-stacked.svg";
 
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !muted;
+      setMuted(!muted);
+    }
+  };
+
   return (
     <section className="relative w-full min-h-[380px] bg-black overflow-hidden" style={{ height: "70vh" }}>
-      {/* Glow behind the logo (video removed for now) */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at 50% 70%, rgba(107,234,153,0.14) 0%, transparent 60%)" }}
+      {/* Video background */}
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover object-top"
+        src="/videos/hero.mp4"
+        poster="/videos/hero-poster.jpg"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
       />
 
       {/* Scanlines */}
@@ -63,6 +81,16 @@ const HeroSection = () => {
         </button>
       </div>
 
+
+      {/* Mute/Unmute */}
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Ativar som" : "Desativar som"}
+        className="absolute bottom-5 right-4 z-[5] w-[34px] h-[34px] rounded-full flex items-center justify-center cursor-pointer transition-all hover:border-primary"
+        style={{ background: "rgba(0,0,0,0.6)", border: "1.5px solid rgba(255,255,255,0.3)" }}
+      >
+        {muted ? <VolumeX className="w-4 h-4 text-foreground" /> : <Volume2 className="w-4 h-4 text-foreground" />}
+      </button>
     </section>
   );
 };
