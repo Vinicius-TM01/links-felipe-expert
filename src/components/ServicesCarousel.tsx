@@ -4,8 +4,8 @@ import capaAcademy from "@/assets/capa-academy.jpg";
 import capaAoVivo from "@/assets/capa-aovivo.jpg";
 import capaVip from "@/assets/capa-vip.jpg";
 
-// TODO: trocar pelo link real do Grupo VIP (checkout ou página de vendas)
-const VIP_LINK = "#";
+const VIP_LINK =
+  "https://api.whatsapp.com/send?phone=5531935025989&text=Ol%C3%A1%2C%20vim%20do%20link%20da%20Bio%20e%20quero%20operar%20com%20o%20Higor!";
 
 const services = [
   {
@@ -15,7 +15,8 @@ const services = [
     desc: "A formação completa da Cripto Trader Academy, do zero ao avançado: análise, estratégia e gestão de banca. Você entende o motivo de cada entrada, como controlar o risco e quando ficar de fora. Acesso 100% gratuito.",
     image: capaAcademy,
     ctaLabel: "Quero minha vaga",
-    ctaLink: "https://criptotraderacademy.com/",
+    ctaLink:
+      "https://criptotraderacademy.curseduca.pro/register?redirect=L20vbGVzc29ucy9hY2Vzc28tZ3JhdHVpdG8tYmlvLWluc3RhLTE3OTAxODgyMDIwODc%3D",
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const services = [
     desc: "Entre no grupo gratuito no Telegram, com mais de 30 mil membros, e acompanhe o meu dia a dia no mercado: análises, operações e o raciocínio por trás de cada decisão.",
     image: capaAoVivo,
     ctaLabel: "Entrar no grupo gratuito",
-    ctaLink: "https://bit.ly/higortradefree",
+    ctaLink: "https://t.me/+PC6syg3TdGc0YjUx",
   },
   {
     id: 3,
@@ -108,6 +109,11 @@ const ServicesCarousel = () => {
             </p>
             <a
               href={activeService.ctaLink}
+              onClick={() =>
+                (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", {
+                  content_name: activeService.label,
+                })
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/80 text-primary-foreground text-[12px] font-bold tracking-[0.5px] px-3 py-1.5 rounded-md transition-colors"
