@@ -3,8 +3,11 @@ import { ImageIcon } from "lucide-react";
 import capaAcademy from "@/assets/capa-academy.jpg";
 import capaAoVivo from "@/assets/capa-aovivo.jpg";
 import capaVip from "@/assets/capa-vip.jpg";
+import capaSuporte from "@/assets/capa-suporte.jpg";
 
 const VIP_LINK = "https://wa.link/bzrre3";
+// TODO: trocar pelo link real do suporte (WhatsApp do time)
+const SUPORTE_LINK = "#";
 
 const services = [
   {
@@ -29,10 +32,19 @@ const services = [
     id: 3,
     label: "Grupo VIP",
     badge: "VIP",
-    desc: "Opere junto comigo, ao vivo, quatro vezes por dia. No Grupo VIP você vê a entrada, a saída e o raciocínio de cada operação em tempo real, lado a lado com a comunidade.",
+    desc: "Opere junto comigo, ao vivo, três vezes por dia. No Grupo VIP você vê a entrada, a saída e o raciocínio de cada operação em tempo real, lado a lado com a comunidade.",
     image: capaVip,
     ctaLabel: "Quero entrar no VIP",
     ctaLink: VIP_LINK,
+  },
+  {
+    id: 4,
+    label: "Suporte",
+    desc: "Dúvida sobre acesso à Academy, ao Grupo VIP ou à plataforma? Fale direto com o meu time de suporte.",
+    image: capaSuporte,
+    ctaLabel: "Falar com o suporte",
+    ctaLink: SUPORTE_LINK,
+    pixelEvent: "Contact",
   },
 ];
 
@@ -50,12 +62,12 @@ const ServicesCarousel = () => {
       </div>
 
       {/* Carousel */}
-      <div className="grid grid-cols-3 gap-2.5 px-4 pb-3">
+      <div className="flex gap-2.5 px-4 pt-1 pb-3 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {services.map((s) => (
           <div
             key={s.id}
             onClick={() => setActive(active === s.id ? null : s.id)}
-            className={`rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
+            className={`shrink-0 w-[30%] snap-start rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
               active === s.id
                 ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(142_75%_67%),0_8px_30px_rgba(107,234,153,0.4)]"
                 : "hover:shadow-[0_8px_30px_rgba(107,234,153,0.35)]"
@@ -106,10 +118,11 @@ const ServicesCarousel = () => {
             <p className="text-[13px] leading-relaxed mb-2.5" style={{ color: "rgba(255,255,255,0.7)" }}>
               {activeService.desc}
             </p>
+            {activeService.ctaLink !== "#" && (
             <a
               href={activeService.ctaLink}
               onClick={() =>
-                (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", {
+                (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "pixelEvent" in activeService ? activeService.pixelEvent : "Lead", {
                   content_name: activeService.label,
                 })
               }
@@ -119,6 +132,7 @@ const ServicesCarousel = () => {
             >
               {activeService.ctaLabel}
             </a>
+            )}
           </>
         )}
       </div>

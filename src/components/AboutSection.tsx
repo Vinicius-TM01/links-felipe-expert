@@ -1,6 +1,6 @@
 const stats = [
   { number: "+30mil", label: "Membros no Telegram" },
-  { number: "4", label: "Lives por dia" },
+  { number: "3", label: "Lives por dia" },
   { number: "+10", label: "Pessoas no time" },
 ];
 
@@ -16,7 +16,7 @@ const AboutSection = () => (
       Cripto Trader Academy, a escola onde ensino o método que uso no meu dia a dia.
     </p>
     <p className="text-sm font-light leading-[1.7]" style={{ color: "rgba(255,255,255,0.72)" }}>
-      No Grupo VIP eu não mostro resultado pronto: opero ao vivo, junto com os alunos, quatro vezes por dia. Você vê a
+      No Grupo VIP eu não mostro resultado pronto: opero ao vivo, junto com os alunos, três vezes por dia. Você vê a
       entrada, a saída e o raciocínio de cada operação, e aprende operando do meu lado.
     </p>
 
