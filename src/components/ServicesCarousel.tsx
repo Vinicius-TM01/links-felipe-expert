@@ -4,8 +4,7 @@ import capaAcademy from "@/assets/capa-academy.jpg";
 import capaAoVivo from "@/assets/capa-aovivo.jpg";
 import capaVip from "@/assets/capa-vip.jpg";
 
-const VIP_LINK =
-  "https://api.whatsapp.com/send?phone=5531935025989&text=Ol%C3%A1%2C%20vim%20do%20link%20da%20Bio%20e%20quero%20operar%20com%20o%20Higor!";
+const VIP_LINK = "https://wa.link/bzrre3";
 
 const services = [
   {
