@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ImageIcon } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import capaAcademy from "@/assets/capa-academy.jpg";
 import capaAoVivo from "@/assets/capa-aovivo.jpg";
 import capaVip from "@/assets/capa-vip.jpg";
@@ -52,6 +52,49 @@ const ServicesCarousel = () => {
   const [active, setActive] = useState<number | null>(null);
   const activeService = services.find((s) => s.id === active);
 
+  // Horizontal row: arrows + mouse drag (touch swipe already works natively)
+  const rowRef = useRef<HTMLDivElement>(null);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(false);
+  const drag = useRef({ down: false, startX: 0, startScroll: 0, moved: false });
+
+  const updateArrows = () => {
+    const el = rowRef.current;
+    if (!el) return;
+    setCanPrev(el.scrollLeft > 4);
+    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  };
+
+  useEffect(() => {
+    updateArrows();
+    window.addEventListener("resize", updateArrows);
+    return () => window.removeEventListener("resize", updateArrows);
+  }, []);
+
+  const scrollByCard = (dir: 1 | -1) => {
+    const el = rowRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * el.clientWidth * 0.6, behavior: "smooth" });
+  };
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (e.pointerType !== "mouse" || !rowRef.current) return;
+    drag.current = { down: true, startX: e.clientX, startScroll: rowRef.current.scrollLeft, moved: false };
+    rowRef.current.style.scrollSnapType = "none";
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    const d = drag.current;
+    if (!d.down || !rowRef.current) return;
+    const dx = e.clientX - d.startX;
+    if (Math.abs(dx) > 5) d.moved = true;
+    rowRef.current.scrollLeft = d.startScroll - dx;
+  };
+  const endDrag = () => {
+    if (!drag.current.down) return;
+    drag.current.down = false;
+    if (rowRef.current) rowRef.current.style.scrollSnapType = "";
+  };
+
   return (
     <section className="py-2 pb-6">
       {/* Section header */}
@@ -62,11 +105,23 @@ const ServicesCarousel = () => {
       </div>
 
       {/* Carousel */}
-      <div className="flex gap-2.5 px-4 pt-1 pb-3 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div className="relative">
+      <div
+        ref={rowRef}
+        onScroll={updateArrows}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerLeave={endDrag}
+        className="flex gap-2.5 px-4 pt-1 pb-3 overflow-x-auto snap-x snap-mandatory select-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
         {services.map((s) => (
           <div
             key={s.id}
-            onClick={() => setActive(active === s.id ? null : s.id)}
+            onClick={() => {
+              if (drag.current.moved) return;
+              setActive(active === s.id ? null : s.id);
+            }}
             className={`shrink-0 w-[30%] snap-start rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
               active === s.id
                 ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(142_75%_67%),0_8px_30px_rgba(107,234,153,0.4)]"
@@ -76,7 +131,7 @@ const ServicesCarousel = () => {
           >
             {/* Placeholder or Image */}
             {s.image ? (
-              <img src={s.image} alt={s.label} className="w-full h-full object-cover" />
+              <img src={s.image} alt={s.label} draggable={false} className="w-full h-full object-cover" />
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center gap-2.5">
                 <ImageIcon className="w-9 h-9 opacity-40 text-muted-foreground" />
@@ -102,6 +157,27 @@ const ServicesCarousel = () => {
             </div>
           </div>
         ))}
+      </div>
+      {canPrev && (
+        <button
+          type="button"
+          aria-label="Ver cards anteriores"
+          onClick={() => scrollByCard(-1)}
+          className="absolute left-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/70 border border-primary/50 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </button>
+      )}
+      {canNext && (
+        <button
+          type="button"
+          aria-label="Ver mais cards"
+          onClick={() => scrollByCard(1)}
+          className="absolute right-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/70 border border-primary/50 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+        >
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      )}
       </div>
 
       {/* Expanded description */}
