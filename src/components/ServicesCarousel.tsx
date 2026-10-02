@@ -5,9 +5,8 @@ import capaAoVivo from "@/assets/capa-aovivo.jpg";
 import capaVip from "@/assets/capa-vip.jpg";
 import capaSuporte from "@/assets/capa-suporte.jpg";
 
-const VIP_LINK = "https://wa.link/bzrre3";
-// TODO: trocar pelo link real do suporte (WhatsApp do time)
-const SUPORTE_LINK = "#";
+const VIP_LINK = "https://chat.whatsapp.com/CPdCm7jFWcX1mCWA7Bffn2";
+const SUPORTE_LINK = "https://wa.link/bzrre3";
 
 const services = [
   {
