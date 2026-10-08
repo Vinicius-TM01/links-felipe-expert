@@ -1,12 +1,12 @@
-import logo from "@/assets/logo.svg";
+import Signature from "@/components/Signature";
+import { TIKTOK_LINK } from "@/lib/links";
 
 const Footer = () => (
   <footer className="py-6 px-5 pb-10 border-t border-border text-center">
-    <img src={logo} alt="Higor Trader" className="h-6 opacity-80 mb-2.5 mx-auto" />
+    <div className="mb-1"><Signature size={40} animate={false} flourish={false} /></div>
     <div className="flex justify-center gap-4 my-3.5">
       {[
-        { name: "instagram", url: "https://www.instagram.com/higortraderjr/" },
-        { name: "tiktok", url: "https://www.tiktok.com/@higorbs_trader" },
+        { name: "tiktok", url: TIKTOK_LINK },
       ].map((s) => (
         <a
           key={s.name}
@@ -20,7 +20,7 @@ const Footer = () => (
       ))}
     </div>
     <p className="text-[11px] text-muted-foreground tracking-[1px]">
-      © 2026 Higor Trader. Todos os direitos reservados.
+      © 2026 Fellipin Trader. Todos os direitos reservados.
     </p>
   </footer>
 );

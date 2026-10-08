@@ -21,18 +21,18 @@ const Index = () => {
         className="fixed top-0 left-0 h-[2px] bg-primary z-[9998]"
         style={{
           width: 0,
-          animation: "progressLoad 3s ease forwards",
-          boxShadow: "0 0 8px hsl(142 75% 67%)",
+          animation: "progressLoad 3.6s ease forwards",
+          boxShadow: "0 0 8px hsl(24 100% 55%)",
         }}
       />
 
       <div
         className="max-w-[480px] mx-auto min-h-screen"
-        style={{ opacity: 0, animation: "mainReveal 0.8s ease 3.4s forwards" }}
+        style={{ opacity: 0, animation: "mainReveal 0.8s ease 4s forwards" }}
       >
         <Header />
         <HeroSection />
-        <div className="h-8 relative z-[1] -mt-8" style={{ background: "linear-gradient(to bottom, transparent, hsl(150 10% 4%))" }} />
+        <div className="h-8 relative z-[1] -mt-8" style={{ background: "linear-gradient(to bottom, transparent, hsl(20 14% 4%))" }} />
 
         <ServicesCarousel />
         <div className="h-px bg-border mx-4 mb-5" />

@@ -1,49 +1,37 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
-import capaAcademy from "@/assets/capa-academy.jpg";
-import capaAoVivo from "@/assets/capa-aovivo.jpg";
-import capaVip from "@/assets/capa-vip.jpg";
-import capaSuporte from "@/assets/capa-suporte.jpg";
-
-const VIP_LINK = "https://chat.whatsapp.com/CPdCm7jFWcX1mCWA7Bffn2";
-const SUPORTE_LINK = "https://wa.link/bzrre3";
+import capaConta from "@/assets/capa-conta.jpg";
+import capaTiktok from "@/assets/capa-tiktok.jpg";
+import capaHistoria from "@/assets/capa-historia.jpg";
+import { AFFILIATE_LINK, TIKTOK_LINK } from "@/lib/links";
 
 const services = [
   {
     id: 1,
-    label: "Academy",
-    badge: "GRÁTIS",
-    desc: "A formação completa da Cripto Trader Academy, do zero ao avançado: análise, estratégia e gestão de banca. Você entende o motivo de cada entrada, como controlar o risco e quando ficar de fora. Acesso 100% gratuito.",
-    image: capaAcademy,
-    ctaLabel: "Quero minha vaga",
-    ctaLink:
-      "https://criptotraderacademy.curseduca.pro/register?redirect=L20vbGVzc29ucy9hY2Vzc28tZ3JhdHVpdG8tYmlvLWluc3RhLTE3OTAxODgyMDIwODc%3D",
+    label: "Comece aqui",
+    badge: "LINK OFICIAL",
+    desc: "Crie sua conta pelo meu link oficial e comece a acompanhar o mercado do jeito que eu faço no dia a dia. Operar envolve risco: estude, comece pequeno e não invista o que você não pode perder.",
+    image: capaConta,
+    ctaLabel: "Abrir pelo meu link",
+    ctaLink: AFFILIATE_LINK,
   },
   {
     id: 2,
-    label: "Ao vivo",
-    desc: "Entre no grupo gratuito no Telegram, com mais de 30 mil membros, e acompanhe o meu dia a dia no mercado: análises, operações e o raciocínio por trás de cada decisão.",
-    image: capaAoVivo,
-    ctaLabel: "Entrar no grupo gratuito",
-    ctaLink: "https://t.me/+PC6syg3TdGc0YjUx",
+    label: "TikTok",
+    desc: "Acompanhe a minha rotina de trader, as análises e os bastidores de quem largou o jornalismo esportivo para viver do mercado.",
+    image: capaTiktok,
+    ctaLabel: "Seguir no TikTok",
+    ctaLink: TIKTOK_LINK,
+    pixelEvent: "Contact",
   },
   {
     id: 3,
-    label: "Grupo VIP",
-    badge: "VIP",
-    desc: "Opere junto comigo, ao vivo, três vezes por dia. No Grupo VIP você vê a entrada, a saída e o raciocínio de cada operação em tempo real, lado a lado com a comunidade.",
-    image: capaVip,
-    ctaLabel: "Quero entrar no VIP",
-    ctaLink: VIP_LINK,
-  },
-  {
-    id: 4,
-    label: "Suporte",
-    desc: "Dúvida sobre acesso à Academy, ao Grupo VIP ou à plataforma? Fale direto com o meu time de suporte.",
-    image: capaSuporte,
-    ctaLabel: "Falar com o suporte",
-    ctaLink: SUPORTE_LINK,
-    pixelEvent: "Contact",
+    label: "Minha história",
+    desc: "Fui jornalista esportivo e há 4 anos vivo do mercado financeiro. Conheça a trajetória do Fellipin Trader.",
+    image: capaHistoria,
+    ctaLabel: "Ler minha história",
+    ctaLink: "#sobre-nos",
+    internal: true,
   },
 ];
 
@@ -123,8 +111,8 @@ const ServicesCarousel = () => {
             }}
             className={`shrink-0 w-[30%] snap-start rounded-md overflow-hidden cursor-pointer relative transition-all duration-200 bg-surface hover:scale-105 ${
               active === s.id
-                ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(142_75%_67%),0_8px_30px_rgba(107,234,153,0.4)]"
-                : "hover:shadow-[0_8px_30px_rgba(107,234,153,0.35)]"
+                ? "outline outline-2 outline-primary shadow-[0_0_0_2px_hsl(24_100%_55%),0_8px_30px_rgba(255,122,26,0.4)]"
+                : "hover:shadow-[0_8px_30px_rgba(255,122,26,0.35)]"
             }`}
             style={{ aspectRatio: "3/4" }}
           >
@@ -197,12 +185,11 @@ const ServicesCarousel = () => {
             <a
               href={activeService.ctaLink}
               onClick={() =>
-                (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "pixelEvent" in activeService ? activeService.pixelEvent : "Lead", {
+                !("internal" in activeService) && (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "pixelEvent" in activeService ? activeService.pixelEvent : "Lead", {
                   content_name: activeService.label,
                 })
               }
-              target="_blank"
-              rel="noopener noreferrer"
+              {...("internal" in activeService ? {} : { target: "_blank", rel: "noopener noreferrer" })}
               className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/80 text-primary-foreground text-[12px] font-bold tracking-[0.5px] px-3 py-1.5 rounded-md transition-colors"
             >
               {activeService.ctaLabel}

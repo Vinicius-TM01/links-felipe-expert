@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,27 +6,27 @@
 
 @layer base {
   :root {
-    --background: 150 10% 4%;
-    --foreground: 80 14% 95%;
-    --card: 150 8% 7%;
-    --card-foreground: 80 14% 95%;
-    --popover: 150 8% 7%;
-    --popover-foreground: 80 14% 95%;
-    --primary: 142 75% 67%;
-    --primary-foreground: 139 66% 9%;
-    --secondary: 150 7% 10%;
-    --secondary-foreground: 80 14% 95%;
-    --muted: 150 7% 10%;
-    --muted-foreground: 129 5% 62%;
-    --accent: 142 78% 75%;
-    --accent-foreground: 139 66% 9%;
+    --background: 20 14% 4%;
+    --foreground: 36 20% 95%;
+    --card: 20 10% 7%;
+    --card-foreground: 36 20% 95%;
+    --popover: 20 10% 7%;
+    --popover-foreground: 36 20% 95%;
+    --primary: 24 100% 55%;
+    --primary-foreground: 20 90% 8%;
+    --secondary: 20 8% 10%;
+    --secondary-foreground: 36 20% 95%;
+    --muted: 20 8% 10%;
+    --muted-foreground: 30 6% 62%;
+    --accent: 32 100% 62%;
+    --accent-foreground: 20 90% 8%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 150 6% 16%;
-    --input: 150 6% 16%;
-    --ring: 142 75% 67%;
+    --border: 20 7% 16%;
+    --input: 20 7% 16%;
+    --ring: 24 100% 55%;
     --radius: 0.25rem;
-    --surface: 150 7% 10%;
+    --surface: 20 8% 10%;
 
     --font-display: 'Bebas Neue', sans-serif;
     --font-condensed: 'Barlow Condensed', sans-serif;
@@ -68,9 +68,9 @@
 }
 
 @keyframes accentSlam {
-  0% { opacity: 0; transform: translateX(-20px) translateY(10px); filter: drop-shadow(0 0 0px rgba(107,234,153,0)); }
-  60% { opacity: 1; transform: translateX(3px) translateY(-2px); filter: drop-shadow(0 0 20px rgba(107,234,153,0.8)); }
-  100% { opacity: 1; transform: translateX(0) translateY(0); filter: drop-shadow(0 0 8px rgba(107,234,153,0.4)); }
+  0% { opacity: 0; transform: translateX(-20px) translateY(10px); filter: drop-shadow(0 0 0px rgba(255,122,26,0)); }
+  60% { opacity: 1; transform: translateX(3px) translateY(-2px); filter: drop-shadow(0 0 20px rgba(255,122,26,0.8)); }
+  100% { opacity: 1; transform: translateX(0) translateY(0); filter: drop-shadow(0 0 8px rgba(255,122,26,0.4)); }
 }
 
 @keyframes barGrow {
@@ -96,3 +96,18 @@
 /* Hide scrollbar on carousel */
 .carousel-scroll::-webkit-scrollbar { display: none; }
 .carousel-scroll { scrollbar-width: none; }
+
+/* Assinatura animada */
+@keyframes sigWrite {
+  from { clip-path: inset(-20% 100% -20% -5%); }
+  to { clip-path: inset(-20% -5% -20% -5%); }
+}
+@keyframes sigFlourish {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes sigPen {
+  0% { left: 0; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
